@@ -14,10 +14,6 @@ class validate:
         try:
             p = subprocess.check_output(args)
         except subprocess.CalledProcessError as grepexc:
-            #pprint.pprint(grepexc)
-            #pprint.pprint(grepexc.output.decode("utf-8"))
-            #pprint.pprint(grepexc.output)
-
             self.output = json.loads(grepexc.output)
 
 def main():
